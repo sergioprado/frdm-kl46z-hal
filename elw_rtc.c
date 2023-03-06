@@ -123,6 +123,7 @@ void elw_rtc_init(void)
 
     RTC_GetDefaultConfig(&config);
     RTC_Init(RTC_BASE_ADDR, &config);
+    RTC_StartTimer(RTC_BASE_ADDR);
 }
 
 void elw_rtc_datetime_get(struct elw_rtc_datetime *datetime)
